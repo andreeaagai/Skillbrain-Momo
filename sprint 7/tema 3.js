@@ -1,36 +1,46 @@
-function dayOfTheWeek(weekDay){
+function dayOfTheWeek(weekDay) {
   
   let dayName = parseInt(weekDay);
 
-  switch(dayName){
+  switch(dayName) {
     case 1:
-      console.log("Monday");
-      break;
+      return "Monday";
+
     case 2:
-      console.log("Tuesday");
-      break;
+      return "Tuesday";
+
     case 3:
-      console.log("Wednesday");
-      break;
+      return "Wednesday";
+
     case 4:
-      console.log("Thursday");
-      break;
+      return "Thursday";
+
     case 5:
-      console.log("Friday");
-      break;
+      return "Friday";
+
     case 6:
-      console.log("Saturday");
-      break;
+      return "Saturday";
+
     case 7:
-      console.log("Sunday");
-      break;
+    case 0:
+      return "Sunday";
+
     default:
-      console.log("Error");
-      break;
+      return "You have to write a number between 0 and 7.";
   }
 
 }
   
-  // dayOfTheWeek(7)
-  // dayOfTheWeek(1)
-  dayOfTheWeek(8)
+
+function dayReturn(dayNumber) {
+
+  if (dayNumber === 0 || dayNumber <= 7) {
+    return "Today is " + dayOfTheWeek(dayNumber) + ".";
+  } else {
+    return dayOfTheWeek(dayNumber);
+  }
+
+}
+
+  // console.log(dayReturn(2));
+  console.log(dayReturn(11));
