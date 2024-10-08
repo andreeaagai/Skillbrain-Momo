@@ -1,0 +1,57 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.all{
+display: flex;
+flex-direction: row;
+width: 900px;
+margin: auto;
+background-color: #cfc8c3;
+z-index: 100;
+}
+
+.div-left{
+    display: flex;
+    flex-direction: column;
+    z-index: 300;
+    width: 250px;
+    margin: 0;
+    padding: 25px;
+    background-color: rgb(202, 170, 155);
+}
+
+.info{
+border-bottom: 1.5px solid;
+}
+
+.summary{
+    display: block;
+    border-bottom: 1.5px solid;
+}
+
+.more-info{
+    display: block;
+}
+
+.exper{
+   padding: 10px;
+   width: 550px;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1.5px solid; 
+}
+
+.intro{
+    border-bottom: 1.5px solid; 
+}
+
+.skills{
+    border-bottom: 1.5px solid; 
+}
+.edu{
+    border-bottom: 1.5px solid;
+}
