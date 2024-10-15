@@ -19,9 +19,10 @@ console.log("The number of vowels is: " + text);
 
 
 // let char2 = "String de test";
-// let counter2 = 0;
 
 // function counterVocals(char2) {
+
+// let counter2 = 0;
 
 //     for (let i = 0; i < char2.length; i++) {    
             
@@ -34,3 +35,4 @@ console.log("The number of vowels is: " + text);
 //   }
   
 //   console.log(counterVocals(char2));
+  
