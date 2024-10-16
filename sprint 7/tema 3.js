@@ -29,18 +29,16 @@ function dayOfTheWeek(weekDay) {
       return "You have to write a number between 0 and 7.";
   }
 
-}
-  
+}  
 
 function dayReturn(dayNumber) {
 
   if (dayNumber === 0 || dayNumber <= 7) {
     return "Today is " + dayOfTheWeek(dayNumber) + ".";
   } else {
-    return dayOfTheWeek(dayNumber);
+    throw new Error("Invalid day number. Please enter a number between 0 and 7.");
   }
-
 }
 
-  // console.log(dayReturn(2));
-  console.log(dayReturn(11));
+  console.log(dayReturn(2));
+  // console.log(dayReturn(11));
