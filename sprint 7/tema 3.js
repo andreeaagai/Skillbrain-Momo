@@ -26,19 +26,16 @@ function dayOfTheWeek(weekDay) {
       return "Sunday";
 
     default:
-      return "You have to write a number between 0 and 7.";
+      throw "Invalid day number. Please enter a number between 0 and 7.";
   }
-
 }  
 
-function dayReturn(dayNumber) {
+function getOutput(dayNumber) {
 
-  if (dayNumber === 0 || dayNumber <= 7) {
-    return "Today is " + dayOfTheWeek(dayNumber) + ".";
-  } else {
-    throw new Error("Invalid day number. Please enter a number between 0 and 7.");
-  }
+  if (dayNumber >= 0 && dayNumber <= 7) {
+    return "The week day number "+ dayNumber +" is called " + dayOfTheWeek(dayNumber) + ".";
+  } 
 }
 
-  console.log(dayReturn(2));
-  // console.log(dayReturn(11));
+  // console.log(getOutput(2));
+  console.log(getOutput(11));
