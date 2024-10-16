@@ -1,14 +1,15 @@
 // Exemplul 1:
 
 const array = [1, -5, 20, -34, 16, 29, 36, -4];
+const newArray = [...array];
 
-function arrayReverse(array) {
+function arrayReverse(newArray) {
 
-    return array.reverse();
+    return newArray.reverse();
     
 }
 
-console.log(arrayReverse(array));
+console.log(arrayReverse(newArray));
 
 // Exemplul 2:
 

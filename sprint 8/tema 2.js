@@ -9,7 +9,7 @@ for ( let i = 0; i < numbers1.length; i++) {
  
 }
 
-console.log("The sum of the numbers equals: " + sum);
+console.log("The sum of the numbers (" + numbers1 + ") is equals with => " + sum);
 
 // Exemplul 2:
 
@@ -22,5 +22,5 @@ function calculateSum(numbers2) {
 
 const sum2 = calculateSum(numbers2);
 
-console.log("The sum of the numbers equals: " + sum2);
+console.log("The sum of the numbers (" + numbers2 + ") is equals with => " + sum2);
 
