@@ -9,7 +9,6 @@ function getMyRecipe(title, portions, ingredients) {
     console.log(`Recipe ingredients: ${recipe.ingredientsRecipe}`);
     return recipe;
   }
-
 getMyRecipe("Tarte", 4, ["sugar", " milk", " butter", " eggs", " mini fruits."]);
 getMyRecipe("Pizza", 3, ["ham", " cheese", " ketchup."]);
   
