@@ -4,7 +4,7 @@ const letterForCount = "r";
 function findTheLetterCount(string, letter) {
     let count = 0;
     for (let i = 0; i < string.length; i++) {
-        if(string[i].toLowerCase() === letter) {
+        if(string[i].toLowerCase() === letter.toLowerCase()) {
             count ++;
         }
     }
