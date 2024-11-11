@@ -1,11 +1,9 @@
 body {
-    background-color: #202632; 
-}
-.container {
-    margin-top: 222px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: #202632;
 }
 .textarea {
     background-color: #313A49;
@@ -17,24 +15,28 @@ body {
     border: none;
     border-radius: 25px;
 }
+.jokeId {
+    color: #53FFAB;
+}
 .button1 {
-    width: 463px;
-    height: 18px;
+    width: 460px;
+    height: 20px;
+    margin-left: 75px;
+    
 }
 .button2 {
     background-image: url(image/Ellipse\ 61.png);
     background-size: cover;
-    border-radius: 2px;
     width: 50px;
     height: 50px;
     margin-top: 70px;
+    margin-left: 280px;
     border-radius: 50px;
-    margin-left: -5px;
 }
 #joke-id {
     color: #53FFAB;
 }
-.mt-40 {
+.mt-120 {
     margin-top: -120px;
 }
 .mb {
