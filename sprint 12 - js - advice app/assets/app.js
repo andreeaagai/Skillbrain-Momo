@@ -1,4 +1,3 @@
-
 const speak = (joke) => {
     VoiceRSS.speech({
         key: '5ff4b1b6ab8143f488a977bc3a2f2a9c',
@@ -13,7 +12,7 @@ const speak = (joke) => {
 }
 
 const speakOnClick = () => {
-    const joke = document.getElementById('speak-text').value;
+    const joke = document.getElementById('speak-text').innerText;
 
     speak(joke);
 }
@@ -46,8 +45,8 @@ const tellMeAJoke = () => {
             text = question + "\n\n" + answer;  
             jokeId = data.id;
         }   
-        const el = document.getElementById('speak-text');
-        el.value = `JOKE #${jokeId} \n\n "${text}"`;
+        document.getElementById('jokeId').textContent = `JOKE #${jokeId}`;
+        document.getElementById('speak-text').textContent = `"${text}"`;
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);

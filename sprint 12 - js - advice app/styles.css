@@ -2,35 +2,47 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100vh;
     background-color: #202632;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }
-.textarea {
+.container{
+    width: 550px;
+    height: 340px;
     background-color: #313A49;
     color: white;
-    width: 600px;
-    height: 400px;
-    font-size: 25px;
-    text-align: center;
-    border: none;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    position: relative;
     border-radius: 25px;
 }
-.jokeId {
+#jokeId {
     color: #53FFAB;
 }
+#speak-text {
+    margin-left: 20px; 
+    margin-right: 20px; 
+    word-wrap: break-word;
+}
 .button1 {
-    width: 460px;
-    height: 20px;
-    margin-left: 75px;
-    
+    position: absolute;
+    bottom: 70px;
+    left: 45px;
+    color: white;
+    border: none;
+    font-size: 16px;
 }
 .button2 {
+    position: absolute;
+    bottom: -20px;
+    left: 45%;
     background-image: url(image/Ellipse\ 61.png);
     background-size: cover;
     width: 50px;
     height: 50px;
-    margin-top: 70px;
-    margin-left: 280px;
     border-radius: 50px;
 }
 #joke-id {
@@ -51,8 +63,9 @@ body {
 
 @media screen and (max-width: 768px) {
 
-    .body{
-        margin: 0px;
+    .container {
+        width: 420px;
+        height: 380px;
+        margin: 0 25px;
     }
-
 }
