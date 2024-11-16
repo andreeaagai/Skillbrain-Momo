@@ -6,50 +6,47 @@ body {
     height: 100vh;
     background-color: #202632;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
+    font-size: 22px;
 }
 .container{
     width: 550px;
     height: 340px;
-    background-color: #313A49;
+    background-color: #202632;
     color: white;
     display: flex; 
     flex-direction: column; 
     justify-content: flex-start; 
     position: relative;
     border-radius: 25px;
+    box-shadow: 0 2px 6px #4f5662;
 }
-#jokeId {
+#adviceId {
     color: #53FFAB;
 }
-#speak-text {
+#adviceText {
     margin-left: 20px; 
     margin-right: 20px; 
     word-wrap: break-word;
 }
-.button1 {
+.button {
     position: absolute;
-    bottom: 70px;
-    left: 45px;
+    bottom: -30px;
+    left: 38%;
+    background-color: #53FFAB;
+    width: 120px;
+    height: 60px;
+    border: 3px solid rgb(39, 38, 38);
+    border-radius: 40%;
+    opacity: 0.7;
+    box-shadow: 0 2px 6px #4f5662;
+}
+.images {
+    position: absolute;
+    bottom: 85px;
+    left: 40px;
     color: white;
     border: none;
     font-size: 16px;
-}
-.button2 {
-    position: absolute;
-    bottom: -20px;
-    left: 45%;
-    background-image: url(image/Ellipse\ 61.png);
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-}
-#joke-id {
-    color: #53FFAB;
-}
-.mt-120 {
-    margin-top: -120px;
 }
 .mb {
     margin-bottom: -5px;
@@ -60,7 +57,6 @@ body {
 .ml10 {
     margin-left: 10px;
 }
-
 @media screen and (max-width: 768px) {
 
     .container {
