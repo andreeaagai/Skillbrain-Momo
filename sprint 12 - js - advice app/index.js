@@ -12,7 +12,6 @@ async function fetchAdvice() {
     const apiResponse = "https://api.adviceslip.com/advice";
     let adviceText = "";
     let adviceId = "";
-
     try {
         const response = await fetch(apiResponse);
         const adviceData = await response.json();
@@ -23,7 +22,6 @@ async function fetchAdvice() {
     catch (error) {
         console.error(error);
     }
-
     document.getElementById("adviceId").textContent = `Advice #${adviceId}`;
     document.getElementById("adviceText").textContent = `"${adviceText}"`;
 }
