@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #202632;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+.container{
+    width: 550px;
+    height: 340px;
+    background-color: #202632;
+    color: white;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0 2px 6px #4f5662;
+}
+#adviceId {
+    color: #53FFAB;
+}
+#adviceText {
+    margin-left: 20px; 
+    margin-right: 20px; 
+    word-wrap: break-word;
+}
+.button {
+    position: absolute;
+    bottom: -30px;
+    left: 38%;
+    background-color: #53FFAB;
+    width: 120px;
+    height: 60px;
+    border: 3px solid rgb(39, 38, 38);
+    border-radius: 40%;
+    opacity: 0.7;
+    box-shadow: 0 2px 6px #4f5662;
+}
+.images {
+    position: absolute;
+    bottom: 85px;
+    left: 40px;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+.mb {
+    margin-bottom: -5px;
+}
+.mr10 {
+    margin-right: 10px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 420px;
+        height: 380px;
+        margin: 0 25px;
+    }
+}
