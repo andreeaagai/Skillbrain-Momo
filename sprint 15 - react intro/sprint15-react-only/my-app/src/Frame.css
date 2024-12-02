@@ -1,0 +1,36 @@
+.frame {
+  font-family: Sen;
+  filter: drop-shadow(10px 7px 10px rgb(53, 51, 49));
+  background: #ffffff;
+  width: 230px;
+  height: 190px;
+  border-radius: 20px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: Hug (49px) px;
+  height: Fixed (24px) px;
+}
+.item {
+  position: fixed;
+  width: 128px;
+  height: 17px;
+  margin-top: 20px;
+  left: 24px;
+  color: #b9b9b9;
+}
+.status {
+  margin-top: 20px;
+  color: #554e4e;
+  margin-left: 140px;
+}
+.text {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+  margin-left: 15px;
+}

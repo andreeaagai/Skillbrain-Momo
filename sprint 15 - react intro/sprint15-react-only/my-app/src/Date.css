@@ -1,0 +1,24 @@
+.date {
+  font-family: Sen;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 140px;
+  margin-top: 20px;
+}
+.format-date {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+}
+.due-date {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14.44px;
+  letter-spacing: 0.02em;
+  color: #999999;
+}
+.mt-20 {
+  margin-top: -10px;
+}
