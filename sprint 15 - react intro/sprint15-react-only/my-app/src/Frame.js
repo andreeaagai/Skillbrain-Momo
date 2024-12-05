@@ -1,9 +1,9 @@
 import './Frame.css';
 import Date from './Date';
-import Status from './Status-complete';
+import Status from './Status';
 
 export default function Frame() {
-    return(
+    return (
         <div className="frame">
             <div className="header">
                 <p className="item">T-1</p>
