@@ -6,14 +6,14 @@
   height: 190px;
   border-radius: 20px;
 }
-.header {
+.card-header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: Hug (49px) px;
   height: Fixed (24px) px;
 }
-.item {
+.task-id {
   position: fixed;
   width: 128px;
   height: 17px;
@@ -26,11 +26,16 @@
   color: #554e4e;
   margin-left: 140px;
 }
-.text {
+.card-content {
   font-size: 17px;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0.02em;
   margin-top: 20px;
   margin-left: 15px;
+}
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }

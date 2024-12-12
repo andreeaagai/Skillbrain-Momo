@@ -1,6 +1,5 @@
 import './Date.css';
 
-
 const date = new Date('2021-01-24');
 
 const formatDate = (date) => {
@@ -10,7 +9,7 @@ const formatDate = (date) => {
     return `${day}/${month}/${year}`;
 };
 
-export default function DateComponent() {
+export default function Date() {
     return (
         <div className="date">
             <p className="due-date">Due Date</p>

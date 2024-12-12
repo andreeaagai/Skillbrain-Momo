@@ -1,23 +1,11 @@
 import "./App.css";
-import Frame from "./Frame.js";
+import TaskViewer from "./components/TaskViewer";
+
 
 function App() {
   return (
-    <div>
-      <article className="App-header">
-        <h1>Task Manager</h1>
-      </article>
-      <div className="container">
-        <div className="frame-container">
-          <Frame></Frame>
-          <Frame></Frame>
-          <Frame></Frame>
-          <Frame></Frame>
-          <Frame></Frame>
-          <Frame></Frame>
-          <Frame></Frame>
-        </div>
-      </div>
+    <div className="app">
+     <TaskViewer></TaskViewer>
     </div>
   );
 }
