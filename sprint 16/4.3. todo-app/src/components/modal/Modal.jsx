@@ -13,12 +13,8 @@ const Modal = (props) => {
     }
   };
 
-  useEffect(() => {
-    setIsOpen(props.isOpen);
-  }, [props.isOpen]);
-
   return (
-    <div className={`${isOpen ? "modal-wrapper" : "modal-hidden"}`}>
+    <div className={`${props.isOpen ? "modal-wrapper" : "modal-hidden"}`}>
       <i
         onClick={closeModal}
         className="close-icon fa fa-times-circle-o"
@@ -26,6 +22,7 @@ const Modal = (props) => {
       ></i>
 
       <div className="modal-content">{props.children}</div>
+      
     </div>
   );
 };
