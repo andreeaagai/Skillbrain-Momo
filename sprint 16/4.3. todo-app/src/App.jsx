@@ -70,7 +70,7 @@ function App() {
       )
     );
   };
-
+  
   const handleEdit = (todo) => {
     setEditTodo(todo);
     setTitle(todo.title);
