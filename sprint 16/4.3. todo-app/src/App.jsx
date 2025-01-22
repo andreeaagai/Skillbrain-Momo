@@ -35,7 +35,12 @@ const TODOS_MOCK = [
 ];
 
 function App() {
+  const compareTodosIdFn = (todo1, todo2) =>
+    parseInt(todo1.id) > parseInt(todo2.id) ? 1 : -1;
+
   const [todos, setTodos] = useState(TODOS_MOCK);
+  const lastId = todos.sort(compareTodosIdFn).slice().pop().id;
+  const nextId = React.useRef(parseInt(lastId) + 1);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -51,13 +56,16 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newTodo = {
-      id: `${todos.length + 1}`,
-      title: title,
-      description: description,
-      completed: false,
-    };
-    setTodos([...todos, newTodo]);
+    setTodos((todos) => [
+      ...todos,
+      {
+        id: nextId.current.toString(),
+        title: title,
+        description: description,
+        completed: false,
+      },
+    ]);
+    nextId.current = nextId.current + 1;
     setTitle("");
     setDescription("");
     setIsModalOpen(false);
@@ -70,7 +78,7 @@ function App() {
       )
     );
   };
-  
+
   const handleEdit = (todo) => {
     setEditTodo(todo);
     setTitle(todo.title);
@@ -79,6 +87,18 @@ function App() {
   };
   const handleDelete = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
+  const handleSubmitEdit = (event) => {
+    event.preventDefault();
+    const updatedTodo = { ...editTodo, title, description };
+    setTodos(
+      todos.map((todo) => (todo.id === editTodo.id ? updatedTodo : todo))
+    );
+    setIsModalOpen(false);
+    setEditTodo(null);
+    setTitle("");
+    setDescription("");
   };
 
   const uncompletedTodos = todos.filter((todo) => !todo.completed);
@@ -119,8 +139,8 @@ function App() {
         {isModalOpen && (
           <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
             <Card>
-              <h2>Create Todo</h2>
-              <form onSubmit={handleSubmit}>
+              <h2>{editTodo ? "Edit Todo" : "Create Todo"}</h2>
+              <form onSubmit={editTodo ? handleSubmitEdit : handleSubmit}>
                 <Input
                   value={title}
                   onChange={handleTitleChange}
@@ -132,7 +152,7 @@ function App() {
                   onChange={handleDescriptionChange}
                   placeholder="Description"
                 />
-                <Button type="submit">Create</Button>
+                <Button type="submit">{editTodo ? "Save" : "Create"}</Button>
               </form>
             </Card>
           </Modal>
